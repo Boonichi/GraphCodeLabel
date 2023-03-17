@@ -1,0 +1,118 @@
+textarea{
+    width: 100%;
+    height: 100%;
+    font-size:x-large;
+}
+.text_box{
+    margin-top: 10%;
+    margin-left: 25%;
+    width: 50%;
+    height: 50%;
+}
+
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    background-color: #333;
+    height: 100%;
+    display: block;
+}
+
+
+button {
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #e8e8e8;
+    --button_outline_color: #000000;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+  }
+  
+  .button_top {
+    display: block;
+    box-sizing: border-box;
+    border: 5px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 1.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+  }
+  
+  button:hover .button_top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.33em);
+  }
+  
+  button:active .button_top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+  }
+
+.button{
+    position: relative;
+    padding-top: 3%;
+    margin-left: 67%;  
+}
+.none{
+    display: none;
+}
+.show{
+    display: block;
+}
+
+
+.search{
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+.waiting{
+  position:fixed;
+  top: 40%;
+  opacity: 0;
+  width: 100%;
+}
+
+.loader {
+  --height-of-loader: 4px;
+  --loader-color: #0071e2;
+  width: 60%;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0,0,0,0.2);
+  position: relative;
+  margin-left: 20%;
+ }
+ 
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+  ;
+ }
+ 
+ @keyframes moving {
+  50% {
+   width: 100%;
+  }
+ 
+  100% {
+   width: 0;
+   right: 0;
+   left: unset;
+  }
+ }
