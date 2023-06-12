@@ -9,6 +9,7 @@ def register_model(fn):
     _model_entry_points[model_name] = fn
     
     return fn
+
 def model_entrypoint(model_name):
     
     return _model_entry_points[model_name]
@@ -25,5 +26,5 @@ def create_model(model_name : str, **kwargs):
         RuntimeError("Unknown model (%s)" % model_name)
     
     model = create_fn(**kwargs)
-
+    print(model)
     return model 
