@@ -1,0 +1,7 @@
+# Spare files
+*sample*
+
+# Spare folders
+**/tree-sitter-cpp
+**/build
+**/workspace
